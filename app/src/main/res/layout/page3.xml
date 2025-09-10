@@ -20,7 +20,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-
     <ImageView
         android:id="@+id/profilePictureImageView"
         android:layout_width="120dp"
@@ -51,11 +50,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Log in Button -->
-
-    <!-- Switch accounts link -->
-
-    <!-- Divider Line -->
     <Button
         android:id="@+id/loginButton"
         android:layout_width="match_parent"
@@ -104,7 +98,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="8dp"
         android:clickable="true"
         android:focusable="true"
         android:fontFamily="sans-serif"
@@ -112,11 +106,20 @@
         android:textColor="#A0522D"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomHandle3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/dividerView"
         app:layout_constraintVertical_bias="0.239" />
+
+    <include
+        android:id="@+id/bottomHandle3"
+        layout="@layout/include_bottom_handle"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -156,6 +156,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Bottom handle include -->
+    <include
+        android:id="@+id/bottomHandle4"
+        layout="@layout/include_bottom_handle"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <!-- Bottom Socially Branding -->
     <LinearLayout
         android:id="@+id/bottomBrandingLayout"
@@ -163,8 +173,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
-        android:layout_marginBottom="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomHandle4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
@@ -176,11 +186,7 @@
             android:textColor="#8B4513"
             android:fontFamily="sans-serif" />
 
-        <View
-            android:layout_width="40dp"
-            android:layout_height="2dp"
-            android:background="#8B4513"
-            android:layout_marginTop="4dp" />
+
 
     </LinearLayout>
 

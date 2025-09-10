@@ -114,8 +114,6 @@
                     android:paddingStart="6dp" />
             </LinearLayout>
 
-
-
             <TextView
                 android:id="@+id/styleButton"
                 android:layout_width="wrap_content"
@@ -258,7 +256,17 @@
             android:scaleType="centerCrop"
             android:src="@drawable/ic_launcher_foreground" />
     </GridLayout>
-    
+
+    <!-- Bottom handle -->
+    <include
+        android:id="@+id/bottomHandle6"
+        layout="@layout/include_bottom_handle"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <!-- Bottom navigation (Search active) -->
     <LinearLayout
         android:id="@+id/bottomNavigationLayout"
@@ -267,7 +275,7 @@
         android:orientation="horizontal"
         android:padding="14dp"
         android:background="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomHandle6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 

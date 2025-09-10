@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <!-- Main Story Image -->
+    <ImageView
+        android:id="@+id/storyImageView18"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/img_4"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Top Bar with Profile Info -->
+    <LinearLayout
+        android:id="@+id/topBar18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Status bar spacer -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+
+        <!-- Story Progress Bars -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="12dp">
+
+            <!-- Progress bar 1 (completed) -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/progress_bar_completed" />
+
+            <!-- Progress bar 2 (completed) -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/progress_bar_completed" />
+
+            <!-- Progress bar 3 (current) -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/progress_bar_current" />
+
+            <!-- Progress bar 4 (pending) -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/progress_bar_pending" />
+
+            <!-- Progress bar 5 (pending) -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/progress_bar_pending" />
+        </LinearLayout>
+
+        <!-- Profile Info Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Profile Picture -->
+
+        <!-- Username and Time -->
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/circle_white_background"
+            android:clipToOutline="true"
+            android:outlineProvider="background"
+            android:padding="2dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_5" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="craig_love"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4h"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+            <!-- Close Button -->
+            <ImageView
+                android:id="@+id/closeButton18"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@drawable/close"
+                android:tint="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Bottom Message Bar -->
+    <LinearLayout
+        android:id="@+id/bottomMessageBar18"
+        android:layout_width="414dp"
+        android:layout_height="82dp"
+        android:background="@color/black"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="14dp"
+        app:layout_constraintBottom_toTopOf="@id/progressBar18"
+        tools:layout_editor_absoluteX="-3dp">
+
+        <!-- Camera Icon -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/camera"
+            android:tint="@color/white" />
+
+        <!-- Message Input Field -->
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/message_input_background"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:text="Send Message"
+            android:textColor="#999999"
+            android:textSize="16sp" />
+
+        <!-- Send Message Icon -->
+        <ImageView
+            android:id="@+id/sendMessageIcon18"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/send"
+            android:tint="@color/white" />
+
+        <!-- More Options Icon -->
+        <ImageView
+            android:id="@+id/moreOptionsIcon18"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/more"
+            android:tint="@color/white" />
+    </LinearLayout>
+
+    <!-- Progress Bar -->
+    <View
+        android:id="@+id/progressBar18"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <include
+        android:id="@+id/bottomHandle15"
+        layout="@layout/include_bottom_handle"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

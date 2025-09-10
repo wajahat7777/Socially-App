@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <!-- Main Story Image -->
+    <ImageView
+        android:id="@+id/storyImageView20"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/img_3"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Top Bar Overlay -->
+    <LinearLayout
+        android:id="@+id/topBar20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:background="@drawable/header_gradient"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Status bar spacer -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="24dp" />
+
+        <!-- Story Progress Bars -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="12dp">
+
+            <!-- Progress bar 1 (completed) -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_weight="2"
+                android:background="@drawable/progress_bar_completed" />
+
+            <!-- Progress bar 2 (pending) -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/progress_bar_pending" />
+        </LinearLayout>
+
+        <!-- Profile Info Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Profile Info -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Profile Picture -->
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/circle_pink_background"
+                    android:clipToOutline="true"
+                    android:outlineProvider="background"
+                    android:padding="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_5" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="gursky.studio"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/checkmark"
+                        android:tint="@color/white"
+                        android:layout_marginStart="4dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="11h"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Close Button -->
+            <ImageView
+                android:id="@+id/closeButton20"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/close"
+                android:tint="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Floating Heart Reactions -->
+    <LinearLayout
+        android:id="@+id/heartReactions20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.835">
+
+        <!-- Heart 1 -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginBottom="8dp"
+            android:alpha="0.8"
+            android:src="@drawable/heart"
+            android:tint="#FF6B6B" />
+
+        <!-- Heart 2 -->
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="12dp"
+            android:alpha="0.6"
+            android:src="@drawable/heart"
+            android:tint="#FF6B6B" />
+
+        <!-- Heart 3 -->
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginBottom="6dp"
+            android:alpha="0.7"
+            android:src="@drawable/heart"
+            android:tint="#FF6B6B" />
+
+        <!-- Heart 4 -->
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:alpha="0.5"
+            android:src="@drawable/heart"
+            android:tint="#FF6B6B" />
+    </LinearLayout>
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/bottomNavBar20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/black"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@id/progressIndicator20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Activity -->
+        <LinearLayout
+            android:id="@+id/activityButton20"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="8dp">
+
+            <FrameLayout
+                android:layout_width="53dp"
+                android:layout_height="wrap_content">
+
+                <!-- Profile Previews -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_marginEnd="-4dp"
+                        android:background="@drawable/circle_white_background"
+                        android:clipToOutline="true"
+                        android:outlineProvider="background"
+                        android:padding="1dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_1" />
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_marginEnd="-4dp"
+                        android:background="@drawable/circle_white_background"
+                        android:clipToOutline="true"
+                        android:outlineProvider="background"
+                        android:padding="1dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_2" />
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:background="@drawable/circle_white_background"
+                        android:clipToOutline="true"
+                        android:outlineProvider="background"
+                        android:padding="1dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_3" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Activity"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- Create -->
+        <LinearLayout
+            android:id="@+id/createButton20"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/create_icon"
+                android:tint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- Facebook -->
+        <LinearLayout
+            android:id="@+id/facebookButton20"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/facebook_icon"
+                android:tint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Facebook"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- Highlight -->
+        <LinearLayout
+            android:id="@+id/highlightButton20"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/heart"
+                android:tint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Highlight"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- More -->
+        <LinearLayout
+            android:id="@+id/moreButton20"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/more"
+                android:tint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="More"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Progress Indicator -->
+    <View
+        android:id="@+id/progressIndicator20"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#D2691E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <include
+        android:id="@+id/bottomHandle20"
+        layout="@layout/include_bottom_handle"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

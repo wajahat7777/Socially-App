@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Status bar spacer -->
+    <View
+        android:id="@+id/statusSpacer11"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Top tabs header -->
+    <LinearLayout
+        android:id="@+id/tabs11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/statusSpacer11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Following"
+                android:textStyle="bold"
+                android:textColor="#8B4513"
+                android:textSize="16sp" />
+            <View
+                android:layout_width="60dp"
+                android:layout_height="2dp"
+                android:background="@drawable/tab_active_underline"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You"
+                android:textColor="#999999"
+                android:textSize="16sp" />
+            <View
+                android:layout_width="36dp"
+                android:layout_height="2dp"
+                android:background="@android:color/transparent"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Feed list -->
+
+    <!-- Bottom handle -->
+    <ScrollView
+        android:id="@+id/feedScroll11"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationLayout11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabs11"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <!-- Row 1: overlapping avatars on the left -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp">
+
+                <FrameLayout
+                    android:layout_width="56dp"
+                    android:layout_height="36dp">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_vertical|start"
+                        android:background="@drawable/circle_white_background"
+                        android:clipToOutline="true"
+                        android:outlineProvider="background"
+                        android:padding="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_3" />
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_vertical|start"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/circle_white_background"
+                        android:clipToOutline="true"
+                        android:outlineProvider="background"
+                        android:padding="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_2" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="karennne liked 3 posts. 3h"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="6dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="4dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/img_1" />
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="4dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/img_2" />
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/img_4" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Row 2: overlapping avatars on the left -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp">
+
+                <FrameLayout
+                    android:layout_width="56dp"
+                    android:layout_height="36dp">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_vertical|start"
+                        android:background="@drawable/circle_white_background"
+                        android:clipToOutline="true"
+                        android:outlineProvider="background"
+                        android:padding="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_2" />
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_vertical|start"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/circle_white_background"
+                        android:clipToOutline="true"
+                        android:outlineProvider="background"
+                        android:padding="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_4" />
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="12dp"
+                    android:text="kiero_d and jhon_u started following craig_love. 3h"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_4" />
+            </LinearLayout>
+
+            <!-- You section header -->
+
+            <!-- You Row 1: overlapping avatars on the left -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp">
+
+                <FrameLayout
+                    android:layout_width="56dp"
+                    android:layout_height="36dp">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_vertical|start"
+                        android:background="@drawable/circle_white_background"
+                        android:clipToOutline="true"
+                        android:outlineProvider="background"
+                        android:padding="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img" />
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_vertical|start"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/circle_white_background"
+                        android:clipToOutline="true"
+                        android:outlineProvider="background"
+                        android:padding="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_5" />
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="12dp"
+                    android:text="maxjacobson and zackjohn liked mis_potter’s post. 3h"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_5" />
+            </LinearLayout>
+
+            <!-- You Row 2: overlapping avatars on the left -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp">
+
+                <FrameLayout
+                    android:layout_width="56dp"
+                    android:layout_height="36dp">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_vertical|start"
+                        android:background="@drawable/circle_white_background"
+                        android:clipToOutline="true"
+                        android:outlineProvider="background"
+                        android:padding="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_4" />
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_vertical|start"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/circle_white_background"
+                        android:clipToOutline="true"
+                        android:outlineProvider="background"
+                        android:padding="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_2" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ahmad and Ayesha liked 3 posts. 3h"
+                        android:textSize="14sp"
+                        android:textColor="#000000" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="6dp">
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/img_5"
+                            android:scaleType="centerCrop"
+                            android:layout_marginEnd="4dp" />
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/img_2"
+                            android:scaleType="centerCrop"
+                            android:layout_marginEnd="4dp" />
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/img_4"
+                            android:scaleType="centerCrop" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Extra Row A -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp">
+
+                <FrameLayout
+                    android:layout_width="56dp"
+                    android:layout_height="36dp">
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_vertical|start"
+                        android:src="@drawable/img_5"
+                        android:background="@drawable/circle_white_background"
+                        android:scaleType="centerCrop"
+                        android:clipToOutline="true"
+                        android:outlineProvider="background"
+                        android:padding="2dp" />
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_vertical|start"
+                        android:layout_marginStart="20dp"
+                        android:src="@drawable/img"
+                        android:background="@drawable/circle_white_background"
+                        android:scaleType="centerCrop"
+                        android:clipToOutline="true"
+                        android:outlineProvider="background"
+                        android:padding="2dp" />
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="12dp"
+                    android:text="maxjacobson liked 3 posts. 2h"
+                    android:textSize="14sp"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/img_4"
+                    android:scaleType="centerCrop" />
+            </LinearLayout>
+
+            <!-- Extra Row B -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp">
+
+                <FrameLayout
+                    android:layout_width="56dp"
+                    android:layout_height="36dp">
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_vertical|start"
+                        android:src="@drawable/img_2"
+                        android:background="@drawable/circle_white_background"
+                        android:scaleType="centerCrop"
+                        android:clipToOutline="true"
+                        android:outlineProvider="background"
+                        android:padding="2dp" />
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_vertical|start"
+                        android:layout_marginStart="20dp"
+                        android:src="@drawable/img_5"
+                        android:background="@drawable/circle_white_background"
+                        android:scaleType="centerCrop"
+                        android:clipToOutline="true"
+                        android:outlineProvider="background"
+                        android:padding="2dp" />
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="12dp"
+                    android:text="zackjohn and karennne liked martini_rond’s post. 4h"
+                    android:textSize="14sp"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/img_3"
+                    android:scaleType="centerCrop" />
+            </LinearLayout>
+
+            <!-- Extra Row C -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp">
+
+                <FrameLayout
+                    android:layout_width="56dp"
+                    android:layout_height="36dp">
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_vertical|start"
+                        android:src="@drawable/img_5"
+                        android:background="@drawable/circle_white_background"
+                        android:scaleType="centerCrop"
+                        android:clipToOutline="true"
+                        android:outlineProvider="background"
+                        android:padding="2dp" />
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_vertical|start"
+                        android:layout_marginStart="20dp"
+                        android:src="@drawable/img_3"
+                        android:background="@drawable/circle_white_background"
+                        android:scaleType="centerCrop"
+                        android:clipToOutline="true"
+                        android:outlineProvider="background"
+                        android:padding="2dp" />
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="12dp"
+                    android:text="andreww_ and kiero_d liked 2 posts. 5h"
+                    android:textSize="14sp"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/img_2"
+                    android:scaleType="centerCrop" />
+            </LinearLayout>
+
+            <!-- Extra Row D -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp">
+
+                <FrameLayout
+                    android:layout_width="56dp"
+                    android:layout_height="36dp">
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_vertical|start"
+                        android:src="@drawable/img"
+                        android:background="@drawable/circle_white_background"
+                        android:scaleType="centerCrop"
+                        android:clipToOutline="true"
+                        android:outlineProvider="background"
+                        android:padding="2dp" />
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_vertical|start"
+                        android:layout_marginStart="20dp"
+                        android:src="@drawable/img_3"
+                        android:background="@drawable/circle_white_background"
+                        android:scaleType="centerCrop"
+                        android:clipToOutline="true"
+                        android:outlineProvider="background"
+                        android:padding="2dp" />
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="12dp"
+                    android:text="martini_rond liked 5 posts. 6h"
+                    android:textSize="14sp"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/img_4"
+                    android:scaleType="centerCrop" />
+            </LinearLayout>
+
+            <!-- Extra Row E -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp">
+
+                <FrameLayout
+                    android:layout_width="56dp"
+                    android:layout_height="36dp">
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_vertical|start"
+                        android:src="@drawable/img_2"
+                        android:background="@drawable/circle_white_background"
+                        android:scaleType="centerCrop"
+                        android:clipToOutline="true"
+                        android:outlineProvider="background"
+                        android:padding="2dp" />
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_vertical|start"
+                        android:layout_marginStart="20dp"
+                        android:src="@drawable/img_5"
+                        android:background="@drawable/circle_white_background"
+                        android:scaleType="centerCrop"
+                        android:clipToOutline="true"
+                        android:outlineProvider="background"
+                        android:padding="2dp" />
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="12dp"
+                    android:text="joshua_l liked your post. 7h"
+                    android:textSize="14sp"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/img"
+                    android:scaleType="centerCrop" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom handle -->
+    <include
+        android:id="@+id/bottomHandle11"
+        layout="@layout/include_bottom_handle"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Bottom navigation -->
+    <LinearLayout
+        android:id="@+id/bottomNavigationLayout11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:padding="14dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomHandle11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:src="@drawable/home"
+            android:tint="#8B4513"
+            android:contentDescription="Home" />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:src="@drawable/search"
+            android:tint="#8B4513"
+            android:contentDescription="Search" />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:src="@drawable/addnew"
+            android:tint="#8B4513"
+            android:contentDescription="Add" />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:src="@drawable/like"
+            android:tint="#8B4513"
+            android:contentDescription="Activity" />
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/img"
+            android:contentDescription="Profile"
+            android:background="@drawable/circle_white_background"
+            android:scaleType="centerCrop"
+            android:clipToOutline="true"
+            android:outlineProvider="background"
+            android:padding="2dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

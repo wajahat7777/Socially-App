@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Status spacer -->
+    <View
+        android:id="@+id/statusSpacer9"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/header9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/statusSpacer9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/back"
+            android:tint="#8B4513"
+            android:contentDescription="Back" />
+
+        <TextView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:text="IS"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/circle_rust" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="internshala"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:paddingStart="10dp" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/video"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="Video"
+            app:tint="#8B4513" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/info"
+            android:contentDescription="Info"
+            app:tint="#8B4513"/>
+    </LinearLayout>
+
+    <!-- Chat area container -->
+    <FrameLayout
+        android:id="@+id/chatArea9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/header9"
+        app:layout_constraintBottom_toTopOf="@id/inputBar9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Centered timestamp -->
+
+        <!-- Outgoing bubble (right aligned) -->
+        <TextView
+            android:id="@+id/timestamp9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:text="4:49 PM"
+            android:textColor="#777777"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/bubble_rust_right"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- Bottom handle include -->
+    <include
+        android:id="@+id/bottomHandle9"
+        layout="@layout/include_bottom_handle"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Input bar -->
+    <LinearLayout
+        android:id="@+id/inputBar9"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_margin="12dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/input_bar_background"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomHandle9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/camera"
+            android:tint="#8B4513"
+            android:contentDescription="Camera" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Message..."
+            android:textColor="#999999"
+            android:textSize="16sp"
+            android:paddingStart="8dp" />
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/mic"
+            android:tint="#8B4513"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="Mic" />
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/gallery"
+            android:tint="#8B4513"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="Gallery" />
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/attach"
+            android:tint="#8B4513"
+            android:contentDescription="Attach" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

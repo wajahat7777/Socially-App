@@ -62,8 +62,6 @@
                 android:src="@drawable/igstream"
                 android:contentDescription="Notifications" />
 
-            <!-- Notification Badge -->
-
         </RelativeLayout>
 
         <!-- Direct Message Icon -->
@@ -463,6 +461,16 @@
 
     </ScrollView>
 
+    <!-- Bottom handle -->
+    <include
+        android:id="@+id/bottomHandle5"
+        layout="@layout/include_bottom_handle"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <!-- Bottom Navigation -->
     <LinearLayout
         android:id="@+id/bottomNavigationLayout"
@@ -472,7 +480,7 @@
         android:background="@color/white"
         android:elevation="8dp"
         android:padding="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomHandle5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 

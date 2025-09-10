@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <!-- Main Camera Preview Area -->
+    <ImageView
+        android:id="@+id/cameraPreview17"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Top-Left Overlay Icon -->
+    <ImageView
+        android:id="@+id/topLeftIcon17"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/circle_white_background"
+        android:padding="6dp"
+        android:src="@drawable/settings"
+        android:tint="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Top-Right Overlay Icon (Chevron) -->
+    <ImageView
+        android:id="@+id/topRightChevron17"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/down"
+        android:tint="@color/white"
+        android:rotation="270"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Bottom-Left Overlays (Gallery and Flash) -->
+    <LinearLayout
+        android:id="@+id/bottomLeftControls17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="120dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/galleryIcon17"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/square_green_background"
+            android:padding="8dp"
+            android:src="@drawable/gallery"
+            android:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/flashIcon17"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/circle_white_background"
+            android:padding="8dp"
+            android:src="@drawable/flash"
+            android:tint="@color/black" />
+    </LinearLayout>
+
+    <!-- Bottom-Right Overlays (Switch Camera and Filters) -->
+    <LinearLayout
+        android:id="@+id/bottomRightControls17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="120dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/filtersIcon17"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/circle_white_background"
+            android:padding="8dp"
+            android:src="@drawable/smiley"
+            android:tint="@color/black" />
+
+        <ImageView
+            android:id="@+id/switchCameraIcon17"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/circle_white_background"
+            android:padding="8dp"
+            android:src="@drawable/switch_camera"
+             />
+    </LinearLayout>
+
+    <!-- Bottom Camera Controls Bar -->
+
+    <!-- Reusable Bottom Handle Bar -->
+    <LinearLayout
+        android:id="@+id/cameraControlsBar17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:padding="16dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Capture Button -->
+
+        <!-- Capture Modes -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="top"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:text="TYPE"
+                android:textColor="#8B4513"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="71dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:text="LIVE"
+                android:textColor="#8B4513"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/normalModeText17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:text="NORMAL"
+                android:textColor="#8B4513"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:text="BOOMERANG"
+                android:textColor="#8B4513"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:text="SUPER"
+                android:textColor="#8B4513"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Underline for "NORMAL" mode -->
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/captureButton17"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:background="@drawable/capture_button_background"
+        android:contentDescription="Capture Photo/Video"
+        tools:layout_editor_absoluteX="169dp"
+        tools:layout_editor_absoluteY="734dp" />
+
+    <include
+        android:id="@+id/bottomHandle15"
+        layout="@layout/include_bottom_handle"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

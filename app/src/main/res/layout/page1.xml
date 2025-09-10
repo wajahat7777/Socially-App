@@ -34,7 +34,6 @@
             android:textSize="16sp"
             android:textColor="#8B4513" />
 
-        <!-- "SMD" text -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -45,5 +44,14 @@
             android:layout_marginTop="4dp" />
 
     </LinearLayout>
+
+    <include
+        android:id="@+id/bottomHandle1"
+        layout="@layout/include_bottom_handle"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8B5A5A">
+
+    <!-- Centered caller avatar -->
+    <ImageView
+        android:id="@+id/callerAvatar"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:src="@drawable/img_4"
+        android:contentDescription="Caller avatar"
+        android:background="@drawable/avatar_round_rect"
+        android:clipToOutline="true"
+        android:outlineProvider="background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="120dp" />
+
+    <TextView
+        android:id="@+id/callerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mother ❤"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/callerAvatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/callDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="03:12"
+        android:textColor="@color/white"
+        android:alpha="0.9"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/callerName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <LinearLayout
+        android:id="@+id/bottomControls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Left utility button (menu) -->
+        <ImageView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/rounded_icon_button"
+            android:padding="16dp"
+            android:src="@drawable/notes"
+            android:tint="@color/white"
+            android:contentDescription="Utility" />
+
+        <!-- Center red end call button -->
+        <ImageView
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/circle_red"
+            android:padding="22dp"
+            android:src="@drawable/addnew"
+            android:tint="@color/white"
+            android:contentDescription="End call" />
+
+        <!-- Right speaker button -->
+        <ImageView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/rounded_icon_button"
+            android:padding="16dp"
+            android:src="@drawable/volume"
+            android:tint="@color/white"
+            android:contentDescription="Speaker" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

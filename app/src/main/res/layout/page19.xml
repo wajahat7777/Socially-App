@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <!-- Main Story Image -->
+    <ImageView
+        android:id="@+id/storyImageView19"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/img_3"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Top Toolbar -->
+    <LinearLayout
+        android:id="@+id/topToolbar19"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/toolbar_gradient"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Status bar spacer -->
+
+        <!-- Close Button -->
+        <ImageView
+            android:id="@+id/closeButton19"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/close"
+            android:tint="@color/black"
+            android:background="@drawable/circle_white_background"
+            android:padding="6dp" />
+
+        <!-- Editing Tools -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingStart="126dp"
+            android:paddingEnd="16dp">
+
+            <!-- Tag People Icon -->
+            <ImageView
+                android:id="@+id/tagPeopleIcon19"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/person_check"
+                android:tint="@color/black"
+                android:background="@drawable/circle_white_background"
+                android:padding="6dp"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Add Text Icon -->
+            <ImageView
+                android:id="@+id/addTextIcon19"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/text_aa"
+                android:tint="@color/black"
+                android:background="@drawable/circle_white_background"
+                android:padding="6dp"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Stickers Icon -->
+            <ImageView
+                android:id="@+id/stickersIcon19"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/attach"
+                android:tint="@color/black"
+                android:background="@drawable/circle_white_background"
+                android:padding="6dp"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Music Icon -->
+            <ImageView
+                android:id="@+id/musicIcon19"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/music"
+                android:tint="@color/black"
+                android:background="@drawable/circle_white_background"
+                android:padding="6dp"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Effects Icon -->
+
+            <!-- More Options Icon -->
+            <ImageView
+                android:id="@+id/moreOptionsIcon19"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/circle_white_background"
+                android:padding="6dp"
+                android:src="@drawable/more"
+                android:tint="@color/black" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Bottom Sharing Bar -->
+    <LinearLayout
+        android:id="@+id/bottomSharingBar19"
+        android:layout_width="412dp"
+        android:layout_height="93dp"
+        android:background="#333333"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@id/timelineBar19"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Your Stories Button -->
+        <LinearLayout
+            android:id="@+id/yourStoriesButton19"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/pill_button_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/circle_white_background"
+                android:clipToOutline="true"
+                android:outlineProvider="background"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your stories"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Close Friends Button -->
+        <LinearLayout
+            android:id="@+id/closeFriendsButton19"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/pill_button_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/circle_green_background"
+                android:padding="4dp"
+                android:src="@drawable/star" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Close Friends"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Send Button -->
+        <ImageView
+            android:id="@+id/sendButton19"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/circle_white_background"
+            android:padding="8dp"
+            android:rotation="270"
+            android:src="@drawable/down"
+            android:tint="@color/black" />
+    </LinearLayout>
+
+    <!-- Timeline/Progress Bar -->
+    <View
+        android:id="@+id/timelineBar19"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#D2691E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <include
+        android:id="@+id/bottomHandle15"
+        layout="@layout/include_bottom_handle"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <View
+        android:id="@+id/statusSpacer12"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Tabs header: Following | You (You active) -->
+    <LinearLayout
+        android:id="@+id/tabs12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/statusSpacer12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Following"
+                android:textColor="#999999"
+                android:textSize="16sp" />
+            <View
+                android:layout_width="36dp"
+                android:layout_height="2dp"
+                android:background="@android:color/transparent"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You"
+                android:textStyle="bold"
+                android:textColor="#8B4513"
+                android:textSize="16sp" />
+            <View
+                android:layout_width="36dp"
+                android:layout_height="2dp"
+                android:background="@drawable/tab_active_underline"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scroll12"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tabs12"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationLayout12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Follow Requests -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Follow Requests"
+                android:textStyle="bold"
+                android:textColor="#8B4513"
+                android:padding="16dp" />
+
+            <!-- New section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="New"
+                android:textStyle="bold"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="4dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/img_3"
+                    android:background="@drawable/circle_white_background"
+                    android:scaleType="centerCrop"
+                    android:clipToOutline="true"
+                    android:outlineProvider="background"
+                    android:padding="2dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="12dp"
+                    android:text="karennne liked your photo. 1h"
+                    android:textSize="14sp"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/img_5"
+                    android:scaleType="centerCrop" />
+            </LinearLayout>
+
+            <!-- Today section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Today"
+                android:textStyle="bold"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="4dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp">
+
+                <FrameLayout
+                    android:layout_width="56dp"
+                    android:layout_height="36dp">
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_vertical|start"
+                        android:src="@drawable/img"
+                        android:background="@drawable/circle_white_background"
+                        android:scaleType="centerCrop"
+                        android:clipToOutline="true"
+                        android:outlineProvider="background"
+                        android:padding="2dp" />
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_vertical|start"
+                        android:layout_marginStart="20dp"
+                        android:src="@drawable/img_5"
+                        android:background="@drawable/circle_white_background"
+                        android:scaleType="centerCrop"
+                        android:clipToOutline="true"
+                        android:outlineProvider="background"
+                        android:padding="2dp" />
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="12dp"
+                    android:text="kiero_d, zackjohn and 26 others liked your photo. 3h"
+                    android:textSize="14sp"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/img_2"
+                    android:scaleType="centerCrop" />
+            </LinearLayout>
+
+            <!-- This Week section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="This Week"
+                android:textStyle="bold"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="4dp" />
+
+            <!-- Comment mention with Reply button -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/img_4"
+                    android:background="@drawable/circle_white_background"
+                    android:scaleType="centerCrop"
+                    android:clipToOutline="true"
+                    android:outlineProvider="background"
+                    android:padding="2dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="craig_love mentioned you in a comment: @jacob_w exactly.."
+                        android:textSize="14sp"
+                        android:textColor="#000000" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2d"
+                        android:textSize="12sp"
+                        android:textColor="#999999"
+                        android:paddingTop="4dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reply"
+                        android:textColor="#999999"
+                        android:paddingTop="6dp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/img_3"
+                    android:scaleType="centerCrop" />
+            </LinearLayout>
+
+            <!-- Follow rows with actions -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/img"
+                    android:background="@drawable/circle_white_background"
+                    android:scaleType="centerCrop"
+                    android:clipToOutline="true"
+                    android:outlineProvider="background"
+                    android:padding="2dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="12dp"
+                    android:text="martini_rond started following you. 3d"
+                    android:textSize="14sp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="96dp"
+                    android:layout_height="36dp"
+                    android:gravity="center"
+                    android:text="Message"
+                    android:textColor="#8B4513"
+                    android:background="@drawable/btn_outline" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/img_4"
+                    android:background="@drawable/circle_white_background"
+                    android:scaleType="centerCrop"
+                    android:clipToOutline="true"
+                    android:outlineProvider="background"
+                    android:padding="2dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="12dp"
+                    android:text="maxjacobson started following you. 3d"
+                    android:textSize="14sp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="96dp"
+                    android:layout_height="36dp"
+                    android:gravity="center"
+                    android:text="Message"
+                    android:textColor="#8B4513"
+                    android:background="@drawable/btn_outline" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/img_2"
+                    android:background="@drawable/circle_white_background"
+                    android:scaleType="centerCrop"
+                    android:clipToOutline="true"
+                    android:outlineProvider="background"
+                    android:padding="2dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="12dp"
+                    android:text="mis_potter started following you. 3d"
+                    android:textSize="14sp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="96dp"
+                    android:layout_height="36dp"
+                    android:gravity="center"
+                    android:text="Follow"
+                    android:textColor="@color/white"
+                    android:background="@drawable/btn_filled"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="This Month"
+                android:textStyle="bold"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp" />
+
+            <!-- This Month extra rows -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/img_5"
+                    android:background="@drawable/circle_white_background"
+                    android:scaleType="centerCrop"
+                    android:clipToOutline="true"
+                    android:outlineProvider="background"
+                    android:padding="2dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="12dp"
+                    android:text="alexa_rose started following you. 1w"
+                    android:textSize="14sp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="96dp"
+                    android:layout_height="36dp"
+                    android:gravity="center"
+                    android:text="Follow"
+                    android:textColor="@color/white"
+                    android:background="@drawable/btn_filled" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/img_5"
+                    android:background="@drawable/circle_white_background"
+                    android:scaleType="centerCrop"
+                    android:clipToOutline="true"
+                    android:outlineProvider="background"
+                    android:padding="2dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="12dp"
+                    android:text="nina.dev liked your photo. 2w"
+                    android:textSize="14sp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="96dp"
+                    android:layout_height="36dp"
+                    android:gravity="center"
+                    android:text="Message"
+                    android:textColor="#8B4513"
+                    android:background="@drawable/btn_outline" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/bottomHandle12"
+        layout="@layout/include_bottom_handle"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/bottomNavigationLayout12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:padding="14dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomHandle12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:src="@drawable/home"
+            android:tint="#8B4513" />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:src="@drawable/search"
+            android:tint="#8B4513" />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:src="@drawable/addnew"
+            android:tint="#8B4513" />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:src="@drawable/like"
+            android:tint="#8B4513" />
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/img"
+            android:background="@drawable/circle_white_background"
+            android:scaleType="centerCrop"
+            android:clipToOutline="true"
+            android:outlineProvider="background"
+            android:padding="2dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
