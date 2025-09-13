@@ -42,7 +42,7 @@
                 android:layout_height="20dp"
                 android:src="@drawable/search"
                 android:contentDescription="Search"
-                android:tint="#8B4513" />
+                 app:tint="#8B4513" />
 
             <TextView
                 android:layout_width="0dp"
@@ -62,7 +62,7 @@
             android:layout_marginStart="12dp"
             android:src="@drawable/scanner"
             android:contentDescription="Scan"
-            android:tint="#8B4513" />
+            app:tint="#8B4513" />
     </LinearLayout>
 
     <!-- Category chips (horizontal) -->
@@ -102,9 +102,9 @@
                     android:layout_width="16dp"
                     android:layout_height="16dp"
                     android:src="@drawable/shop"
-                    android:tint="#8B4513"
-                    android:contentDescription="Shop icon" />
-
+                    android:contentDescription="Shop icon"
+                    app:tint="#8B4513" />
+                   
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -290,7 +290,7 @@
                 android:layout_height="24dp"
                 android:src="@drawable/home"
                 android:contentDescription="Home"
-                android:tint="#8B4513" />
+                app:tint="#8B4513" />
         </LinearLayout>
 
         <LinearLayout
@@ -304,7 +304,7 @@
                 android:layout_height="24dp"
                 android:src="@drawable/search"
                 android:contentDescription="Search"
-                android:tint="#8B4513" />
+                 app:tint="#8B4513" />
         </LinearLayout>
 
         <LinearLayout
@@ -318,7 +318,7 @@
                 android:layout_height="24dp"
                 android:src="@drawable/addnew"
                 android:contentDescription="Add"
-                android:tint="#8B4513" />
+                 app:tint="#8B4513" />
         </LinearLayout>
 
         <LinearLayout
@@ -332,7 +332,7 @@
                 android:layout_height="24dp"
                 android:src="@drawable/like"
                 android:contentDescription="Activity"
-                android:tint="#8B4513" />
+                 app:tint="#8B4513" />
         </LinearLayout>
 
         <LinearLayout

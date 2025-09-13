@@ -144,7 +144,7 @@
             <ImageView
                 android:layout_width="16dp"
                 android:layout_height="16dp"
-                android:src="@drawable/music"
+                android:src="@drawable/musicc"
                 android:tint="@color/white" />
 
             <TextView
@@ -325,7 +325,7 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/send"
+                android:src="@drawable/sendd"
                 android:tint="@color/white" />
             <TextView
                 android:layout_width="wrap_content"

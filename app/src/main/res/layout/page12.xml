@@ -34,6 +34,7 @@
             android:orientation="vertical"
             android:gravity="center">
             <TextView
+                android:id="@+id/followingTab12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Following"
@@ -495,7 +496,7 @@
             android:layout_width="0dp"
             android:layout_height="24dp"
             android:layout_weight="1"
-            android:src="@drawable/like"
+            android:src="@drawable/heart"
             android:tint="#8B4513" />
         <ImageView
             android:layout_width="24dp"

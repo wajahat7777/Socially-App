@@ -6,8 +6,11 @@ import android.os.Bundle
 import android.text.SpannableString
 import android.text.Spanned
 import android.text.style.StyleSpan
+import android.view.View
 import android.widget.Button
+import android.widget.FrameLayout
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
@@ -108,8 +111,10 @@ class NavigationActivity : AppCompatActivity() {
     }
     
     private fun setupPage1() {
-        // Page 1 is the splash screen - no navigation needed
-        // You can add a timer here to auto-navigate after a few seconds
+        // Page 1 - Logo click navigation to page 2
+        findViewById<ImageView>(R.id.logoImageView)?.setOnClickListener {
+            navigateToPage(2)
+        }
     }
     
     private fun setupPage2() {
@@ -120,18 +125,16 @@ class NavigationActivity : AppCompatActivity() {
         
         // Create Account button navigation
         findViewById<Button>(R.id.createAccountButton)?.setOnClickListener {
-            // Here you would typically validate the form and then navigate
-            // For now, let's navigate to page 4 (login with input fields)
-            navigateToPage(4)
+            // Navigate to page 3 (create account form)
+            navigateToPage(3)
         }
     }
     
     private fun setupPage3() {
         // Login button navigation
         findViewById<Button>(R.id.loginButton)?.setOnClickListener {
-            // Here you would typically validate login and navigate to main app
-            // For now, let's navigate to page 1 (splash screen)
-            navigateToPage(1)
+            // Navigate to page 5 (home page)
+            navigateToPage(5)
         }
         
         // Switch accounts navigation
@@ -164,9 +167,8 @@ class NavigationActivity : AppCompatActivity() {
         
         // Login button navigation
         findViewById<Button>(R.id.loginButton)?.setOnClickListener {
-            // Here you would typically validate login credentials
-            // For now, let's navigate to page 5 (main feed)
-            navigateToPage(5)
+            // Navigate to page 3 (login form)
+            navigateToPage(3)
         }
         
         // Forgot password navigation
@@ -193,11 +195,10 @@ class NavigationActivity : AppCompatActivity() {
     }
     
     private fun setupPage5() {
-        // Camera icon navigation
+        // Camera icon navigation (profile icon for stories)
         findViewById<ImageView>(R.id.cameraIconImageView)?.setOnClickListener {
-            // Here you would typically open camera
-            // For now, let's navigate to page 2 (signup page)
-            navigateToPage(2)
+            // Navigate to page 18 (story viewer)
+            navigateToPage(18)
         }
         
         // Notification bell navigation
@@ -209,9 +210,14 @@ class NavigationActivity : AppCompatActivity() {
         
         // Message icon navigation
         findViewById<ImageView>(R.id.messageIconImageView)?.setOnClickListener {
-            // Here you would typically open messages
-            // For now, let's navigate to page 4 (login with inputs)
-            navigateToPage(4)
+            // Navigate to page 8 (messages list)
+            navigateToPage(8)
+        }
+        
+        // Like icon navigation
+        findViewById<ImageView>(R.id.likeIcon5)?.setOnClickListener {
+            // Navigate to page 11 (activity)
+            navigateToPage(11)
         }
         
         // Bottom navigation tabs
@@ -219,108 +225,133 @@ class NavigationActivity : AppCompatActivity() {
             // Already on home page
         }
         
+        // Search tab navigation - testing with simplified page 6
         findViewById<LinearLayout>(R.id.searchTabLayout)?.setOnClickListener {
-            // Navigate to page 6 (search/explore page)
-            navigateToPage(6)
+            try {
+                println("Search tab clicked - navigating to page 6")
+                navigateToPage(6)
+            } catch (e: Exception) {
+                println("Error navigating to page 6: ${e.message}")
+            }
         }
         
         findViewById<LinearLayout>(R.id.addTabLayout)?.setOnClickListener {
-            // Here you would typically open create post
-            // For now, let's navigate to page 2 (signup page)
-            navigateToPage(2)
+            // Navigate to media picker for creating posts
+            navigateToPage(16)
         }
         
         findViewById<LinearLayout>(R.id.activityTabLayout)?.setOnClickListener {
-            // Here you would typically open activity
-            // For now, let's navigate to page 3 (profile login)
-            navigateToPage(3)
-        }
-        
-        findViewById<LinearLayout>(R.id.profileTabLayout)?.setOnClickListener {
-            // Here you would typically open profile
-            // For now, let's navigate to page 3 (profile login)
-            navigateToPage(3)
-        }
-    }
-    
-    private fun setupPage6() {
-        // Scan icon navigation
-        findViewById<ImageView>(R.id.scanIconImageView)?.setOnClickListener {
-            // Here you would typically open camera scanner
-            // For now, let's navigate to page 2 (signup page)
-            navigateToPage(2)
-        }
-        
-        // Category buttons navigation
-        findViewById<TextView>(R.id.shopButton)?.setOnClickListener {
-            // Here you would typically filter by shop category
-            // For now, let's navigate to page 5 (main feed)
-            navigateToPage(5)
-        }
-        
-        findViewById<TextView>(R.id.styleButton)?.setOnClickListener {
-            // Here you would typically filter by style category
-            // For now, let's navigate to page 5 (main feed)
-            navigateToPage(5)
-        }
-        
-        findViewById<TextView>(R.id.sportsButton)?.setOnClickListener {
-            // Here you would typically filter by sports category
-            // For now, let's navigate to page 5 (main feed)
-            navigateToPage(5)
-        }
-        
-        findViewById<TextView>(R.id.autoButton)?.setOnClickListener {
-            // Here you would typically filter by auto category
-            // For now, let's navigate to page 5 (main feed)
-            navigateToPage(5)
-        }
-        
-        findViewById<TextView>(R.id.musicButton)?.setOnClickListener {
-            // Here you would typically filter by music category
-            // For now, let's navigate to page 5 (main feed)
-            navigateToPage(5)
-        }
-        
-        // Bottom navigation tabs
-        findViewById<LinearLayout>(R.id.homeTabLayout)?.setOnClickListener {
-            // Navigate to page 5 (main feed)
-            navigateToPage(5)
-        }
-        
-        findViewById<LinearLayout>(R.id.searchTabLayout)?.setOnClickListener {
-            // Already on search page
-        }
-        
-        findViewById<LinearLayout>(R.id.addTabLayout)?.setOnClickListener {
-            // Here you would typically open create post
-            // For now, let's navigate to page 2 (signup page)
-            navigateToPage(2)
-        }
-        
-        findViewById<LinearLayout>(R.id.activityTabLayout)?.setOnClickListener {
-            // Here you would typically open activity
-            // For now, let's navigate to page 3 (profile login)
-            navigateToPage(3)
+            // Navigate to page 11 (activity screen)
+            navigateToPage(11)
         }
         
         findViewById<LinearLayout>(R.id.profileTabLayout)?.setOnClickListener {
             // Navigate to page 13 (profile page)
             navigateToPage(13)
         }
+        
+        // Story navigation - first story (Your Story) navigates to page 20
+        findViewById<LinearLayout>(R.id.yourStoryLayout)?.setOnClickListener {
+            navigateToPage(20)
+        }
+        
+        // Other story profiles navigate to page 18
+        findViewById<LinearLayout>(R.id.karennneStoryLayout)?.setOnClickListener {
+            navigateToPage(18)
+        }
+        
+        findViewById<LinearLayout>(R.id.zackjohnStoryLayout)?.setOnClickListener {
+            navigateToPage(18)
+        }
+        
+        findViewById<LinearLayout>(R.id.kieronStoryLayout)?.setOnClickListener {
+            navigateToPage(18)
+        }
+        
+        findViewById<LinearLayout>(R.id.craigStoryLayout)?.setOnClickListener {
+            navigateToPage(18)
+        }
+        
+        // Post profile icon navigates to page 21
+        findViewById<ImageView>(R.id.joshuaProfileIcon)?.setOnClickListener {
+            navigateToPage(21)
+        }
+    }
+    
+    private fun setupPage6() {
+        try {
+            // Simplified setupPage6 to avoid crashes
+            println("Setting up page 6...")
+            
+            // Search bar navigation - clicking on search bar takes to page 7
+            findViewById<LinearLayout>(R.id.searchRow)?.setOnClickListener {
+                navigateToPage(7)
+            }
+            
+            // Bottom navigation tabs
+            findViewById<LinearLayout>(R.id.homeTabLayout)?.setOnClickListener {
+                navigateToPage(5)
+            }
+            
+            findViewById<LinearLayout>(R.id.searchTabLayout)?.setOnClickListener {
+                // Already on search page
+            }
+            
+            findViewById<LinearLayout>(R.id.addTabLayout)?.setOnClickListener {
+                navigateToPage(16)
+            }
+            
+            findViewById<LinearLayout>(R.id.activityTabLayout)?.setOnClickListener {
+                navigateToPage(11)
+            }
+            
+            findViewById<LinearLayout>(R.id.profileTabLayout)?.setOnClickListener {
+                navigateToPage(13)
+            }
+            
+            println("Page 6 setup completed successfully")
+        } catch (e: Exception) {
+            println("Error setting up page 6: ${e.message}")
+        }
     }
     
     private fun setupPage7() {
-        // Search results page - basic navigation
-        findViewById<ImageView>(R.id.backArrow7)?.setOnClickListener {
+        // Clear button navigation - goes back to page 6
+        findViewById<LinearLayout>(R.id.clearButtonLayout)?.setOnClickListener {
             navigateToPage(6)
         }
     }
     
     private fun setupPage8() {
         // Messages list page - basic navigation
+        // Back button navigation
         findViewById<ImageView>(R.id.backArrow8)?.setOnClickListener {
             navigateToPage(5)
+        }
+        
+        // Message row navigation - clicking on any message takes to page 9
+        findViewById<LinearLayout>(R.id.messageRow1)?.setOnClickListener {
+            navigateToPage(9)
+        }
+        
+        findViewById<LinearLayout>(R.id.messageRow2)?.setOnClickListener {
+            navigateToPage(9)
+        }
+        
+        findViewById<LinearLayout>(R.id.messageRow3)?.setOnClickListener {
+            navigateToPage(9)
+        }
+        
+        findViewById<LinearLayout>(R.id.messageRow4)?.setOnClickListener {
+            navigateToPage(9)
+        }
+        
+        findViewById<LinearLayout>(R.id.messageRow5)?.setOnClickListener {
+            navigateToPage(9)
+        }
+        
+        findViewById<LinearLayout>(R.id.messageRow6)?.setOnClickListener {
+            navigateToPage(9)
         }
     }
     
@@ -329,49 +360,102 @@ class NavigationActivity : AppCompatActivity() {
         findViewById<ImageView>(R.id.backArrow9)?.setOnClickListener {
             navigateToPage(8)
         }
+        
+        // Video icon navigation
+        findViewById<ImageView>(R.id.videoIcon9)?.setOnClickListener {
+            navigateToPage(10)
+        }
     }
     
     private fun setupPage10() {
         // Call screen page - basic navigation
-        findViewById<ImageView>(R.id.endCallButton)?.setOnClickListener {
-            navigateToPage(8)
+        findViewById<ImageView>(R.id.endCallButton10)?.setOnClickListener {
+            navigateToPage(9)
         }
     }
     
     private fun setupPage11() {
         // Activity screen - basic navigation
-        findViewById<LinearLayout>(R.id.homeTabLayout11)?.setOnClickListener {
+        // Following tab - stays on page 11
+        findViewById<TextView>(R.id.followingTab11)?.setOnClickListener {
+            // Already on following tab, stay on page 11
+        }
+        
+        // You tab - navigates to page 12
+        findViewById<TextView>(R.id.youTab11)?.setOnClickListener {
+            navigateToPage(12)
+        }
+        
+        // Bottom navigation - Home icon (first ImageView in bottomNavigationLayout11)
+        val bottomNav11 = findViewById<LinearLayout>(R.id.bottomNavigationLayout11)
+        bottomNav11?.getChildAt(0)?.setOnClickListener {
             navigateToPage(5)
         }
-        findViewById<LinearLayout>(R.id.searchTabLayout11)?.setOnClickListener {
+        
+        // Bottom navigation - Search icon (second ImageView in bottomNavigationLayout11)
+        bottomNav11?.getChildAt(1)?.setOnClickListener {
             navigateToPage(6)
         }
-        findViewById<LinearLayout>(R.id.addTabLayout11)?.setOnClickListener {
+        
+        // Bottom navigation - Add icon (third ImageView in bottomNavigationLayout11)
+        bottomNav11?.getChildAt(2)?.setOnClickListener {
             navigateToPage(2)
         }
-        findViewById<LinearLayout>(R.id.activityTabLayout11)?.setOnClickListener {
+        
+        // Bottom navigation - Activity icon (fourth ImageView in bottomNavigationLayout11)
+        bottomNav11?.getChildAt(3)?.setOnClickListener {
             // Already on activity page
         }
-        findViewById<LinearLayout>(R.id.profileTabLayout11)?.setOnClickListener {
+        
+        // Bottom navigation - Profile icon (fifth ImageView in bottomNavigationLayout11)
+        bottomNav11?.getChildAt(4)?.setOnClickListener {
             navigateToPage(13)
+        }
+        
+        // Profile icons navigation - navigate to page 21
+        findViewById<FrameLayout>(R.id.karennneProfileIcons11)?.setOnClickListener {
+            navigateToPage(21)
+        }
+        
+        findViewById<FrameLayout>(R.id.kieroJhonProfileIcons11)?.setOnClickListener {
+            navigateToPage(21)
+        }
+        
+        findViewById<FrameLayout>(R.id.maxZackProfileIcons11)?.setOnClickListener {
+            navigateToPage(21)
         }
     }
     
     private fun setupPage12() {
         // Activity screen (You tab) - basic navigation
-        findViewById<LinearLayout>(R.id.homeTabLayout12)?.setOnClickListener {
+        // Following tab - navigates to page 11
+        findViewById<TextView>(R.id.followingTab12)?.setOnClickListener {
+            navigateToPage(11)
+        }
+        
+        // Bottom navigation - Home icon (first ImageView in bottomNavigationLayout12)
+        val bottomNav12 = findViewById<LinearLayout>(R.id.bottomNavigationLayout12)
+        bottomNav12?.getChildAt(0)?.setOnClickListener {
             navigateToPage(5)
         }
-        findViewById<LinearLayout>(R.id.searchTabLayout12)?.setOnClickListener {
+        
+        // Bottom navigation - Search icon (second ImageView in bottomNavigationLayout12)
+        bottomNav12?.getChildAt(1)?.setOnClickListener {
             navigateToPage(6)
         }
-        findViewById<LinearLayout>(R.id.addTabLayout12)?.setOnClickListener {
+        
+        // Bottom navigation - Add icon (third ImageView in bottomNavigationLayout12)
+        bottomNav12?.getChildAt(2)?.setOnClickListener {
             navigateToPage(2)
         }
-        findViewById<LinearLayout>(R.id.activityTabLayout12)?.setOnClickListener {
-            // Already on activity page
+        
+        // Bottom navigation - Activity icon (fourth ImageView in bottomNavigationLayout12)
+        bottomNav12?.getChildAt(3)?.setOnClickListener {
+            navigateToPage(11)
         }
-        findViewById<LinearLayout>(R.id.profileTabLayout12)?.setOnClickListener {
+        
+        // Bottom navigation - Profile icon (fifth ImageView in bottomNavigationLayout12)
+        bottomNav12?.getChildAt(4)?.setOnClickListener {
             navigateToPage(13)
         }
     }
@@ -384,6 +468,21 @@ class NavigationActivity : AppCompatActivity() {
             navigateToPage(11)
         }
         
+        // Profile icon navigation - navigate to page 20
+        findViewById<ImageView>(R.id.profileIcon13)?.setOnClickListener {
+            navigateToPage(20)
+        }
+        
+        // Profile picture navigation - click to view story/highlight
+        findViewById<ImageView>(R.id.profilePicture)?.setOnClickListener {
+            navigateToPage(18)
+        }
+        
+        // Edit Profile button navigation
+        findViewById<TextView>(R.id.editProfileButton)?.setOnClickListener {
+            navigateToPage(15)
+        }
+        
         // Bottom navigation tabs
         findViewById<LinearLayout>(R.id.homeTabLayout13)?.setOnClickListener {
             navigateToPage(5)
@@ -394,7 +493,7 @@ class NavigationActivity : AppCompatActivity() {
         }
         
         findViewById<LinearLayout>(R.id.addTabLayout13)?.setOnClickListener {
-            navigateToPage(2)
+            navigateToPage(16)
         }
         
         findViewById<LinearLayout>(R.id.activityTabLayout13)?.setOnClickListener {
@@ -403,6 +502,19 @@ class NavigationActivity : AppCompatActivity() {
         
         findViewById<LinearLayout>(R.id.profileTabLayout13)?.setOnClickListener {
             // Already on profile page
+        }
+        
+        // Highlight profile icons navigation - navigate to page 14
+        findViewById<LinearLayout>(R.id.friendsHighlightLayout)?.setOnClickListener {
+            navigateToPage(14)
+        }
+        
+        findViewById<LinearLayout>(R.id.sportHighlightLayout)?.setOnClickListener {
+            navigateToPage(14)
+        }
+        
+        findViewById<LinearLayout>(R.id.designHighlightLayout)?.setOnClickListener {
+            navigateToPage(14)
         }
     }
     
@@ -418,11 +530,11 @@ class NavigationActivity : AppCompatActivity() {
             // Already on activity (story viewer)
         }
         
-        findViewById<LinearLayout>(R.id/createTabLayout14)?.setOnClickListener {
+        findViewById<LinearLayout>(R.id.createTabLayout14)?.setOnClickListener {
             navigateToPage(2)
         }
         
-        findViewById<LinearLayout>(R.id/createPostTabLayout14)?.setOnClickListener {
+        findViewById<LinearLayout>(R.id.createPostTabLayout14)?.setOnClickListener {
             navigateToPage(2)
         }
         
@@ -467,8 +579,8 @@ class NavigationActivity : AppCompatActivity() {
     private fun setupPage16() {
         // Media picker page navigation
         findViewById<TextView>(R.id.cancelButton16)?.setOnClickListener {
-            // Cancel media selection and go back to edit profile
-            navigateToPage(15)
+            // Cancel media selection and go back to profile
+            navigateToPage(13)
         }
         
         findViewById<TextView>(R.id.nextButton16)?.setOnClickListener {
@@ -478,13 +590,12 @@ class NavigationActivity : AppCompatActivity() {
         
         // Bottom navigation tabs
         findViewById<LinearLayout>(R.id.libraryTab16)?.setOnClickListener {
-            // Already on library tab
+            // Already on library tab - stay on page 16
         }
         
         findViewById<LinearLayout>(R.id.photoTab16)?.setOnClickListener {
-            // Switch to photo tab - here you would filter to photos only
-            // For now, let's navigate to page 5 (main feed)
-            navigateToPage(5)
+            // Switch to photo tab - navigate to camera page 17
+            navigateToPage(17)
         }
         
         findViewById<LinearLayout>(R.id.videoTab16)?.setOnClickListener {
@@ -495,46 +606,26 @@ class NavigationActivity : AppCompatActivity() {
     }
     
     private fun setupPage17() {
-        // Camera interface navigation
+        // Camera interface navigation - only capture button and back button work
+        
+        // Back button (top right chevron) - navigate back to media picker
         findViewById<ImageView>(R.id.topRightChevron17)?.setOnClickListener {
-            // Close camera and go back to media picker
             navigateToPage(16)
         }
         
-        findViewById<ImageView>(R.id.galleryIcon17)?.setOnClickListener {
-            // Open gallery/media picker
-            navigateToPage(16)
-        }
-        
-        findViewById<ImageView>(R.id.flashIcon17)?.setOnClickListener {
-            // Toggle flash - here you would implement flash functionality
-            // For now, let's navigate to page 5 (main feed)
-            navigateToPage(5)
-        }
-        
-        findViewById<ImageView>(R.id.filtersIcon17)?.setOnClickListener {
-            // Open filters - here you would show filter options
-            // For now, let's navigate to page 6 (search page)
-            navigateToPage(6)
-        }
-        
-        findViewById<ImageView>(R.id.switchCameraIcon17)?.setOnClickListener {
-            // Switch between front/rear camera - here you would implement camera switching
-            // For now, let's navigate to page 13 (profile page)
-            navigateToPage(13)
-        }
-        
+        // Capture button - navigate to story editor
         findViewById<ImageView>(R.id.captureButton17)?.setOnClickListener {
-            // Capture photo/video - here you would implement capture functionality
-            // For now, let's navigate to page 5 (main feed)
-            navigateToPage(5)
+            navigateToPage(19)
         }
+        
+        // All other buttons are disabled (no click listeners)
+        // galleryIcon17, flashIcon17, filtersIcon17, switchCameraIcon17 are non-functional
     }
     
     private fun setupPage18() {
         // Story viewer navigation
         findViewById<ImageView>(R.id.closeButton18)?.setOnClickListener {
-            // Close story and go back to main feed
+            // Close story and go back to home
             navigateToPage(5)
         }
         
@@ -552,72 +643,28 @@ class NavigationActivity : AppCompatActivity() {
     }
     
     private fun setupPage19() {
-        // Story editor navigation
+        // Story editor navigation - only back button and down button work
+        
+        // Back button (close button) - navigate back to camera
         findViewById<ImageView>(R.id.closeButton19)?.setOnClickListener {
-            // Close story editor and go back to camera
             navigateToPage(17)
         }
         
-        findViewById<ImageView>(R.id/tagPeopleIcon19)?.setOnClickListener {
-            // Tag people - here you would show people tagging interface
-            // For now, let's navigate to page 8 (messages)
-            navigateToPage(8)
-        }
-        
-        findViewById<ImageView>(R.id/addTextIcon19)?.setOnClickListener {
-            // Add text - here you would show text editor
-            // For now, let's navigate to page 5 (main feed)
-            navigateToPage(5)
-        }
-        
-        findViewById<ImageView>(R.id/stickersIcon19)?.setOnClickListener {
-            // Add stickers - here you would show sticker picker
-            // For now, let's navigate to page 6 (search)
-            navigateToPage(6)
-        }
-        
-        findViewById<ImageView>(R.id/musicIcon19)?.setOnClickListener {
-            // Add music - here you would show music picker
-            // For now, let's navigate to page 13 (profile)
+        // Down button (send button) - navigate to page 13
+        findViewById<ImageView>(R.id.sendButton19)?.setOnClickListener {
             navigateToPage(13)
         }
         
-        findViewById<ImageView>(R.id/effectsIcon19)?.setOnClickListener {
-            // Add effects - here you would show effects picker
-            // For now, let's navigate to page 11 (activity)
-            navigateToPage(11)
-        }
-        
-        findViewById<ImageView>(R.id/moreOptionsIcon19)?.setOnClickListener {
-            // More options - here you would show additional options
-            // For now, let's navigate to page 15 (edit profile)
-            navigateToPage(15)
-        }
-        
-        findViewById<LinearLayout>(R.id.yourStoriesButton19)?.setOnClickListener {
-            // Share to your stories - here you would implement story sharing
-            // For now, let's navigate to page 5 (main feed)
-            navigateToPage(5)
-        }
-        
-        findViewById<LinearLayout>(R.id.closeFriendsButton19)?.setOnClickListener {
-            // Share to close friends - here you would implement close friends sharing
-            // For now, let's navigate to page 8 (messages)
-            navigateToPage(8)
-        }
-        
-        findViewById<ImageView>(R.id/sendButton19)?.setOnClickListener {
-            // Send story - here you would implement story sending
-            // For now, let's navigate to page 5 (main feed)
-            navigateToPage(5)
-        }
+        // All other buttons are disabled (no click listeners)
+        // tagPeopleIcon19, addTextIcon19, stickersIcon19, musicIcon19, moreOptionsIcon19
+        // yourStoriesButton19, closeFriendsButton19 are non-functional
     }
     
     private fun setupPage20() {
         // Story viewer navigation
         findViewById<ImageView>(R.id.closeButton20)?.setOnClickListener {
-            // Close story viewer and go back to main feed
-            navigateToPage(5)
+            // Close story viewer and go back to profile
+            navigateToPage(13)
         }
         
         findViewById<LinearLayout>(R.id.activityButton20)?.setOnClickListener {

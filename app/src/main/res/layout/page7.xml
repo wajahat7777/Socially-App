@@ -60,13 +60,23 @@
                 android:contentDescription="Clear" />
         </LinearLayout>
 
-        <TextView
+        <LinearLayout
+            android:id="@+id/clearButtonLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Clear"
-            android:textColor="#8B4513"
-            android:textSize="16sp"
-            android:paddingStart="12dp" />
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp">
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clear"
+                android:textColor="#8B4513"
+                android:textSize="16sp" />
+        </LinearLayout>
     </LinearLayout>
 
     <!-- Tabs -->

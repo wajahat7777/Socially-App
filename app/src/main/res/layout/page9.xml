@@ -30,6 +30,7 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
+            android:id="@+id/backArrow9"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@drawable/back"
@@ -56,6 +57,7 @@
             android:paddingStart="10dp" />
 
         <ImageView
+            android:id="@+id/videoIcon9"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@drawable/video"

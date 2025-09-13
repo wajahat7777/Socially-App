@@ -35,6 +35,7 @@
             android:orientation="vertical"
             android:gravity="center">
             <TextView
+                android:id="@+id/followingTab11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Following"
@@ -55,6 +56,7 @@
             android:orientation="vertical"
             android:gravity="center">
             <TextView
+                android:id="@+id/youTab11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="You"
@@ -99,6 +101,7 @@
                 android:paddingBottom="12dp">
 
                 <FrameLayout
+                    android:id="@+id/karennneProfileIcons11"
                     android:layout_width="56dp"
                     android:layout_height="36dp">
 
@@ -180,6 +183,7 @@
                 android:paddingBottom="12dp">
 
                 <FrameLayout
+                    android:id="@+id/kieroJhonProfileIcons11"
                     android:layout_width="56dp"
                     android:layout_height="36dp">
 
@@ -235,6 +239,7 @@
                 android:paddingBottom="12dp">
 
                 <FrameLayout
+                    android:id="@+id/maxZackProfileIcons11"
                     android:layout_width="56dp"
                     android:layout_height="36dp">
 
@@ -659,7 +664,7 @@
             android:layout_width="0dp"
             android:layout_height="24dp"
             android:layout_weight="1"
-            android:src="@drawable/like"
+            android:src="@drawable/heart"
             android:tint="#8B4513"
             android:contentDescription="Activity" />
         <ImageView

@@ -173,7 +173,7 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginStart="12dp"
-            android:src="@drawable/send"
+            android:src="@drawable/sendd"
             android:tint="@color/white" />
 
         <!-- More Options Icon -->

@@ -20,12 +20,16 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:padding="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="20dp"
         app:layout_constraintTop_toBottomOf="@id/statusSpacer13"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
+            android:id="@+id/profileIcon13"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@drawable/back"
@@ -79,6 +83,7 @@
 
                 <!-- Profile Picture -->
                 <ImageView
+                    android:id="@+id/profilePicture"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:src="@drawable/img"
@@ -190,6 +195,7 @@
 
             <!-- Edit Profile Button -->
             <TextView
+                android:id="@+id/editProfileButton"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginStart="16dp"
@@ -243,6 +249,7 @@
 
                     <!-- Friends Highlight -->
                     <LinearLayout
+                        android:id="@+id/friendsHighlightLayout"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
@@ -268,6 +275,7 @@
 
                     <!-- Sport Highlight -->
                     <LinearLayout
+                        android:id="@+id/sportHighlightLayout"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
@@ -293,6 +301,7 @@
 
                     <!-- Design Highlight -->
                     <LinearLayout
+                        android:id="@+id/designHighlightLayout"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
@@ -326,13 +335,24 @@
                 android:paddingTop="16dp"
                 android:paddingBottom="8dp">
 
-                <ImageView
+                <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="24dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/grid"
-                    android:tint="#8B4513"
-                    android:gravity="center" />
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/grid"
+                        android:tint="#8B4513" />
+                    <!-- Line below grid icon -->
+                    <View
+                        android:layout_width="60dp"
+                        android:layout_height="2dp"
+                        android:background="#8B4513"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
 
                 <ImageView
                     android:layout_width="0dp"
@@ -348,13 +368,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/light_gray" />
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="2dp"
-                android:layout_weight="1"
-                android:background="#8B4513"
-                android:layout_marginEnd="50%" />
 
             <!-- Photo Grid -->
             <GridLayout

@@ -69,7 +69,7 @@
             android:id="@+id/messageIconImageView"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/send"
+            android:src="@drawable/sendd"
             android:contentDescription="Messages"
             app:tint="#8B4513" />
 
@@ -94,6 +94,7 @@
 
             <!-- Your Story -->
             <LinearLayout
+                android:id="@+id/yourStoryLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -101,6 +102,7 @@
                 android:layout_marginHorizontal="8dp">
 
                 <ImageView
+                    android:id="@+id/yourStoryIcon"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:src="@drawable/img"
@@ -123,6 +125,7 @@
 
             <!-- karennne Story -->
             <LinearLayout
+                android:id="@+id/karennneStoryLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -130,9 +133,10 @@
                 android:layout_marginHorizontal="8dp">
 
                 <ImageView
+                    android:id="@+id/karennneStoryIcon"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:src="@drawable/img"
+                    android:src="@drawable/img_2"
                     android:contentDescription="karennne"
                     android:background="@drawable/story_gradient_purple"
                     android:padding="2dp"
@@ -152,6 +156,7 @@
 
             <!-- zackjohn Story -->
             <LinearLayout
+                android:id="@+id/zackjohnStoryLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -159,9 +164,10 @@
                 android:layout_marginHorizontal="8dp">
 
                 <ImageView
+                    android:id="@+id/zackjohnStoryIcon"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:src="@drawable/img"
+                    android:src="@drawable/img_3"
                     android:contentDescription="zackjohn"
                     android:background="@drawable/story_gradient_orange"
                     android:padding="2dp"
@@ -181,6 +187,7 @@
 
             <!-- kieron_d Story -->
             <LinearLayout
+                android:id="@+id/kieronStoryLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -188,9 +195,10 @@
                 android:layout_marginHorizontal="8dp">
 
                 <ImageView
+                    android:id="@+id/kieronStoryIcon"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:src="@drawable/img"
+                    android:src="@drawable/img_4"
                     android:contentDescription="kieron_d"
                     android:background="@drawable/story_gradient_purple"
                     android:padding="2dp"
@@ -210,6 +218,7 @@
 
             <!-- craig_ Story -->
             <LinearLayout
+                android:id="@+id/craigStoryLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -217,9 +226,10 @@
                 android:layout_marginHorizontal="8dp">
 
                 <ImageView
+                    android:id="@+id/craigStoryIcon"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:src="@drawable/img"
+                    android:src="@drawable/img_5"
                     android:contentDescription="craig_"
                     android:background="@drawable/story_gradient_orange"
                     android:padding="2dp"
@@ -266,6 +276,7 @@
 
                 <!-- Profile Picture -->
                 <ImageView
+                    android:id="@+id/joshuaProfileIcon"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:src="@drawable/img"
@@ -349,6 +360,7 @@
 
                 <!-- Like Icon -->
                 <ImageView
+                    android:id="@+id/likeIcon5"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:src="@drawable/like"
@@ -372,7 +384,7 @@
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/send"
+                    android:src="@drawable/sendd"
                     android:contentDescription="Share"
                     android:layout_marginEnd="16dp"
                     android:clickable="true"
@@ -519,6 +531,7 @@
             android:focusable="true">
 
             <ImageView
+                android:id="@+id/searchIconImageView"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/search"

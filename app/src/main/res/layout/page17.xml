@@ -51,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="120dp"
+        android:layout_marginBottom="160dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -82,7 +82,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="120dp"
+        android:layout_marginBottom="160dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -180,14 +180,19 @@
         <!-- Underline for "NORMAL" mode -->
     </LinearLayout>
 
+    <!-- Capture Button - Centered at bottom -->
+
     <ImageView
         android:id="@+id/captureButton17"
         android:layout_width="72dp"
         android:layout_height="72dp"
+        android:layout_marginBottom="148dp"
         android:background="@drawable/capture_button_background"
         android:contentDescription="Capture Photo/Video"
-        tools:layout_editor_absoluteX="169dp"
-        tools:layout_editor_absoluteY="734dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <include
         android:id="@+id/bottomHandle15"
