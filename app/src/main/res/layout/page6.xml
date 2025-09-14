@@ -167,17 +167,21 @@
         </LinearLayout>
     </HorizontalScrollView>
 
-    <!-- Image grid (no scrolling; constrained between chips and bottom nav) -->
-    <GridLayout
-        android:id="@+id/imageGrid"
+    <!-- Scrollable image grid -->
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:columnCount="2"
-        android:padding="1dp"
         app:layout_constraintBottom_toTopOf="@id/bottomNavigationLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/categoryChips">
+
+        <GridLayout
+            android:id="@+id/imageGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:padding="1dp">
 
         <!-- Large tile -->
         <ImageView
@@ -255,7 +259,8 @@
             android:contentDescription="grid_8"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_launcher_foreground" />
-    </GridLayout>
+        </GridLayout>
+    </ScrollView>
 
     <!-- Bottom handle -->
     <include
