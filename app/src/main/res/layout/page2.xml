@@ -24,6 +24,8 @@
             android:layout_height="44dp"
             android:src="@drawable/back"
             android:contentDescription="Back"
+            android:clickable="true"
+            android:focusable="true"
             app:tint="@color/white" />
 
         <TextView
